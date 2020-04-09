@@ -51,7 +51,7 @@ for date in dates:
     data[date] = df_date.to_dict('series')
 
 # Define basic plot outline (axes, ranges and title)
-plot = figure(x_range=(0, 500000), y_range=(0, 1), title='COVID-19 Development', plot_height=300)
+plot = figure(x_range=(0, 500000), y_range=(0, 1), title='COVID-19 Development', plot_height=250)
 plot.xaxis.ticker = SingleIntervalTicker(interval=40000)
 plot.xaxis.axis_label = "Number of positively tested patients"
 plot.yaxis.ticker = SingleIntervalTicker(interval=0.05)
@@ -61,7 +61,7 @@ plot.yaxis.axis_label = "Percentage of recovered patients"
 plot.below[0].formatter.use_scientific = False
 
 # Add a large date label on the top left
-label = Label(x=1000, y=0.8, text=str(dates[0]), text_font_size='70pt', text_color='#eeeeee')
+label = Label(x=2000, y=0.85, text=str(dates[0]), text_font_size='70pt', text_color='#eeeeee')
 plot.add_layout(label)
 
 # Define and shuffle the color palette for better visuals
