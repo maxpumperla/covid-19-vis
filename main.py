@@ -51,7 +51,7 @@ for date in dates:
     data[date] = df_date.to_dict('series')
 
 # Define basic plot outline (axes, ranges and title)
-plot = figure(x_range=(0, 500000), y_range=(0, 1), title='COVID-19 Development', plot_height=250)
+plot = figure(x_range=(0, 650000), y_range=(0, 1), title='COVID-19 Development', plot_height=250)
 plot.xaxis.ticker = SingleIntervalTicker(interval=40000)
 plot.xaxis.axis_label = "Number of positively tested patients"
 plot.yaxis.ticker = SingleIntervalTicker(interval=0.05)
